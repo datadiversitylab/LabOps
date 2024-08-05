@@ -16,7 +16,7 @@ This repo has the following basic structure.
 │
 ├──  Mattermost.YAML    <-
 ├──  Owncloud.YAML      <-
-├──  Radicale.YAML      <-
+├──  Radicale           <-
 ├──  OnlyOffice.YAML    <-  
 ```
 
