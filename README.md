@@ -22,7 +22,7 @@ This repo has the following basic structure.
 ```
 
 
-# Wildcard Certificate and HTTPS compression:
+# Wildcard Certificate and HTTP2/HTTPS compression:
 
 To do before setting up selfhosted software. 
 
@@ -32,7 +32,9 @@ Wildcard certificates: a wildcard certificate allows for the management and reac
 2. Within the certificate tab, click on “add” and selected “replace an existing certificate” then selected the Synology DDNS certificate from the list (previously set up). Next selected get a certificate from let’s encrypt and set it as the default certificate by checking the box under it. Click next.
 3. Under the “Get a Certificate from Let’s Encrypt” menu type in your DDNS, its format should look similar to: "X.synology.me". On the email area type in your email On the Subject Alternative Name, type in an asterisk symbol followed by a period (*.) and then type in your DDNS. Final result look something like *.X.synology.me. Click on done. 
 
-HTTP/2+HTTP compression: Multiple settings within the synology networking system can be easily activated to increase security and speed. HTTP/2 is one of these settings. It is reccomended to use the following 2 settings to improve the overall functionality of your setup. By enabling HTTP/2 website connections will become optimized by reducing overall latency without changing web app settings. In order to enable, go to control panel, select network, navigate to the connectivity tab and click on enable HTTP/2 and click apply. HTTP compression, another useful setting to use with these setups, enhances bandwidth efficiency and increases transfer speeds between web servers and browsers when connecting through HTTPS. HTTP compression mitigates classical bottlenecking issues by minimizing the size of data transferred between servers and clients, and opmizises data needed to perform at full capacity. In order to enable,go to control panel, select security, and under the ad
+HTTP/2+HTTPS compression: Multiple settings within the synology networking system can be easily activated to increase security and speed. HTTP/2 is one of these settings. It is reccomended to use the following 2 settings to improve the overall functionality of your setup. By enabling HTTP/2 website connections will become optimized by reducing overall latency without changing web app settings. In order to enable:
+1. Go to control panel, select network, navigate to the connectivity tab and click on enable HTTP/2 and click apply.
+2. HTTP compression, another useful setting to use with these setups, enhances bandwidth efficiency and increases transfer speeds between web servers and browsers when connecting through HTTPS. HTTP compression mitigates classical bottlenecking issues by minimizing the size of data transferred between servers and clients, and opmizises data needed to perform at full capacity. In order to enable,go to control panel, select security, and under the ad
 
 
 
