@@ -12,7 +12,6 @@ Below you can find a set of necessary steps for setting up the set of selfhosted
 This repo has the following basic structure.
 
 ```
-├── docs                <- Space for documentation
 ├── README.md           <- Top-level README. Includes a description for Wildcard and HTTPS compression proccedures for increasing overall speed and security of self hosted deployments. 
 │
 ├──  Mattermost.YAML    <-
