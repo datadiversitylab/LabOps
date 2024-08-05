@@ -26,7 +26,7 @@ This repo has the following basic structure.
 
 To do before setting up selfhosted software. 
 
-Wildcard certificates: a wildcard certificate allows for the management and reach of a secure HTTPS enabled docker container by securing subdomains under a main domain, which ultimately facilitates certificate renewal time and efficiency. Since both Mattermost and ownCloud need to be installed as docker containers, enabling wildcat certificates is necessary: In order to do this:
+Wildcard certificates: a wildcard certificate allows for the management and reach of a secure HTTPS enabled docker container by securing subdomains under a main domain, which ultimately facilitates certificate renewal time and efficiency. Since both Mattermost and ownCloud need to be installed as docker containers, enabling wildcat certificates is necessary. In order to do this:
 
 1. First navigate within the Synology Disk Station Manager (DSM) which is the interactive and management equivalent of a GUI based OS. Once here, the “cerficate” tab setting was selected by first accessing “security” under the connectivity column,  in the control panel.
 2. Within the certificate tab, click on “add” and selected “replace an existing certificate” then selected the Synology DDNS certificate from the list (previously set up). Next selected get a certificate from let’s encrypt and set it as the default certificate by checking the box under it. Click next.
