@@ -2,9 +2,9 @@
 
 ![version](https://img.shields.io/badge/version-1.0-blue) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 
-# Project Intro/Objective 
+# Objective
 
-The purpose of this project is _______.
+Below you can find a set of necessary steps for setting up Mattermost in a self hosted environent in reference to: PAPER TITLE
 
 # Remarks
 
