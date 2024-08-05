@@ -22,9 +22,11 @@ docker run -d --name=portainer \
 portainer/portainer-ce
 
 
-Within the portainer menu,click on “Get Started” under the Environment Wizard’s quick setup. This will take you to the Environments home menu. Click on the ‘pencil’ shaped logo to edit the local environment. A new page will open where the environment details can be further filled out. Under the “Public IP” field input the NAS’s local IP and click on the “Update environment” button to confirm the changes. After this the environment should be updated and confirmed with a message saying so. 
-
-Next click on “Registries” under the main menu  and select “+Add registry”. From the options, shown select “Custom registry” and type in the registry’s details as follows, and then click on “Add registry”:
+10. Within the portainer menu,click on “Get Started” under the Environment Wizard’s quick setup. This will take you to the Environments home menu. 
+11. Click on the ‘pencil’ shaped logo to edit the local environment. A new page will open where the environment details can be further filled out.
+12. Under the “Public IP” field input the NAS’s local IP and click on the “Update environment” button to confirm the changes. 
+13. After this the environment should be updated and confirmed with a message saying so. 
+14. Next click on “Registries” under the main menu  and select “+Add registry”. From the options, shown select “Custom registry” and type in the registry’s details as follows:
 
 Name: GHCR
 Registry URL: ghcr.io
@@ -36,3 +38,5 @@ Repeat the process to add an additional 2 registries with the following details:
 
 1.	Name: Qauy.io
 2.	Registry URL: quay.io
+
+15. Click on “Add registry”:
