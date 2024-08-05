@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  mattermost-db:
+    image: postgres
+    container_name: Mattermost-DB
+    hostname: mattermost-db
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 100
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "mattermost", "-U", "mattermostuser"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    user: 1026:100
+    volumes:
+      - /volume1/docker/mattermost/db:/var/lib/postgresql/data:rw
+    environment:
+      - POSTGRES_DB=mattermost
+      - POSTGRES_USER=mattermostuser
+      - POSTGRES_PASSWORD=mattermostpw
+      - TZ=Europe/Bucharest
+    restart: on-failure:5
+
+  mattermost:
+    image: mattermost/mattermost-team-edition:latest
+    container_name: Mattermost
+    hostname: mattermost
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 200
+    user: 1026:100
+    volumes:
+    environment:
+      - MM_SQLSETTINGS_DRIVERNAME=postgres
+      - MM_SQLSETTINGS_DATASOURCE=postgres://mattermostuser:mattermostpw@mattermost-db:5432/mattermost?sslmode=disable&connect_timeout=10
+      - MM_BLEVESETTINGS_INDEXDIR=/mattermost/bleve-indexes
+      - MM_SERVICESETTINGS_SITEURL=https://chat.yourname.synology.me
+    ports:
+      - 8401:8065
+    restart: on-failure:5
+    depends_on:
+      mattermost-db:
+        condition: service_started
+
