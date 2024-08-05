@@ -11,18 +11,18 @@ Below you can find a set of necessary steps for setting up Mattermost in a self 
 This repo has the following basic structure.
 
 ```
-├── docs                <- Space for documentation. Can also included conceptualization and literature review.
-├── README.md           <- The top-level README for developers.
+├── docs                <- Space for documentation
+├── README.md           <- Top-level README. Includes a description for Wildcard and HTTPS compression proccedures for increasing overall speed and security of self hosted deployments. 
 │
-├──  Mattermost_initialization.YAML    
+├──  Mattermost_initialization.YAML    <-
 │
-├──  Portainer_install.YAML          
+├──  Portainer_install.YAML            <-
 │
-├──  Web_editor_content.YAML              
+├──  Web_editor_content.YAML           <-   
 ```
 
 
-# Wildcat and HTTPS compression:
+# Wildcard and HTTPS compression:
 
 Wildcard certificates: a wildcard certificate allows for the management and reach of a secure HTTPS enabled docker container by securing subdomains under a main domain, which ultimately facilitates certificate renewal time and efficiency. Since both Mattermost and ownCloud were installed as docker containers, enabling wildcat certificates was necessary: In order to do this, we first had to navigate within the Synology Disk Station Manager (DSM) which is the interactive and management equivalent of a GUI based OS. Once here, the “cerficate” tab setting was selected by first accessing “security” under the connectivity column,  in the control panel. Within the certificate tab, we clicked on “add” and selected “replace an existing certificate” then selected the Synology DDNS certificate from the list (previously set up). Next selected get a certificate from let’s encrypt and set it as the default certificate by checking the box under it. Then click next. Under the “Get a Certificate from Let’s Encrypt” menu type in your DDNS, its format should look similar to: X.synology.me. On the email area type in your email On the Subject Alternative Name, type in an asterisk symbol followed by a period (*.) and then type in your DDNS. Final result look something like *.X.synology.me.Click on done. 
 
