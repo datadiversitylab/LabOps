@@ -116,10 +116,13 @@ Port: 8401 (mattermost) or 8467 (onlyoffice) or 4660 (owncloud)
 6. After this is selected, two input boxes for “Header Name” and “Value” will appear, leave as is and click on Save.
 7. Go back to the main interface and find and select “File Station” and open the docker folder, which should have become available after the installation of docker done previously.
 8. Within this folder, click on the create tab and select “folder” this will allow for the creation of a new folder.
-9. Name this new folder “mattermost”.
-10. Within this new folder, create 7 new folders with the following names in lowercase: “client”, “config”, “data”, “db”, “indexes”, “logs”, “plugins”.
-11. Next, log in to portainer by visiting: https://localhost:9443 or the previously set up http://synology-ip-address:9000   and then your synology username and password.
-12. Within the portainer UI, click on “Stacks” and then added a new stack by clicking on the “+Add stack” button. Name the stack “mattermost” and paste the contents of Mattermost.YAML file found in this repository in the Portainer Stacks Web editor section.
+9. Name this new folder “mattermost”, "owncloud" or "onlyoffice" depending on what you are installing.
+10. Within this new folder:
+11.   For mattermost: create 7 new folders with the following names in lowercase: “client”, “config”, “data”, “db”, “indexes”, “logs”, “plugins”.
+12.   For owncloud: create 3 new folders with the following names in lowercase: "data", "db" and "redis"
+13.   For onlyoffice: create 2 new folders with the following names in lowercase: "data", "logs". 
+14. Next, log in to portainer by visiting: https://localhost:9443 or the previously set up http://synology-ip-address:9000   and then your synology username and password.
+15. Within the portainer UI, click on “Stacks” and then added a new stack by clicking on the “+Add stack” button. Name the stack “mattermost” and paste the contents of Mattermost.YAML file found in this repository in the Portainer Stacks Web editor section.
 
 
 ### Acknowledgment
