@@ -87,12 +87,17 @@ Repeat the process to add an additional 2 registries with the following details:
 3. Select the “Create” tab within the Reverse Proxy menu.
 4. Reverse Proxy Rules window will open and should be filled out as follows:
 
+```
 Source:
 
 Protocol: HTTPS
+
 Hostname: chat.yourname.synology.me (mattermost) or
+
 onlyoffice.yourname.synologyme (onlyoffice) or 
+
 owncloud.yourname.synology.me (owncloud)
+
 Port: 443
 
 Check Enable HSTS
@@ -100,8 +105,12 @@ Check Enable HSTS
 Destination:
 
 Protocol: HTTP
+
 Hostname: localhost
+
 Port: 8401 (mattermost) or 8467 (onlyoffice) or 4660 (owncloud)
+```
+
 
 5. After inputting this information, switch to the custom header tab, then click on “Create” and choose the “WebSocket” option.
 6. After this is selected, two input boxes for “Header Name” and “Value” will appear, leave as is and click on Save.
