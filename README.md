@@ -90,7 +90,9 @@ Repeat the process to add an additional 2 registries with the following details:
 Source:
 
 Protocol: HTTPS
-Hostname: chat.yourname.synology.me (mattermost) or onlyoffice.yourname.synologyme (onlyoffice) or owncloud.yourname.synology.me (owncloud)
+Hostname: chat.yourname.synology.me (mattermost) or
+onlyoffice.yourname.synologyme (onlyoffice) or 
+owncloud.yourname.synology.me (owncloud)
 Port: 443
 
 Check Enable HSTS
