@@ -11,8 +11,6 @@ The purpose of this project is _______.
 This repo has the following basic structure.
 
 ```
-
-│
 ├── docs                <- Space for documentation. Can also included conceptualization and literature review.
 ├── README.md           <- The top-level README for developers.
 │
