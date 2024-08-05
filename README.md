@@ -81,6 +81,33 @@ Repeat the process to add an additional 2 registries with the following details:
 
 15. Click on “Add registry”:
 
+# Reverse proxy and addition of YAML files
+
+1. Once portainer is installed, navigate towards the control panel and click on “login portal”.
+2. Once in here, go into the “Advanced” tab and click on reverse Proxy.
+3. Select the “Create” tab within the Reverse Proxy menu.
+4. Reverse Proxy Rules window will open and should be filled out as follows:
+
+Source:
+Protocol: HTTPS
+Hostname: chat.yourname.synology.me 
+Port: 443
+
+Check Enable HSTS
+
+Destination:
+Protocol: HTTP
+Hostname: localhost
+Port: 8401
+
+5. After inputting this information, switch to the custom header tab, then click on “Create” and choose the “WebSocket” option.
+6. After this is selected, two input boxes for “Header Name” and “Value” will appear, leave as is and click on Save.
+7. Go back to the main interface and find and select “File Station” and open the docker folder, which should have become available after the installation of docker done previously.
+8. Within this folder, click on the create tab and select “folder” this will allow for the creation of a new folder.
+9. Name this new folder “mattermost”.
+10. Within this new folder, create 7 new folders with the following names in lowercase: “client”, “config”, “data”, “db”, “indexes”, “logs”, “plugins”.
+11. Next, log in to portainer by visiting: https://localhost:9443 or the previously set up http://synology-ip-address:9000   and then your synology username and password.
+12. Within the portainer UI, click on “Stacks” and then added a new stack by clicking on the “+Add stack” button. Name the stack “mattermost” and paste the contents of Mattermost.YAML file found in this repository in the Portainer Stacks Web editor section.
 
 
 ### Acknowledgment
