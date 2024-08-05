@@ -1,9 +1,9 @@
 1. Open the Synology Package Center and within it, search for, and then install Docker inc.’s “Container Manager”. 
-2. As a next step we went back to the main interface and found “File Station”, Within it we chose the folder named “docker”,
-3. then headed to the “Create” tab and established a new folder named “portainer” in lowercase letters. 
-4. Navigate to Control  Panel, and under its menu selected “Task Scheduler”, 
-5. next went into the “Create” tab and select “Scheduled Task” then “User-defiend script”.
-6. Once this was done, a new window called “Create task” opened. Within it there are multiple empty fields that had to filled as follows:
+2. Go back to the main interface and found “File Station”, Within it chose the folder named “docker”,
+3. Head to the “Create” tab and established a new folder named “portainer” in lowercase letters. 
+4. Navigate to Control  Panel, and under its menu select “Task Scheduler”, 
+5. Next go into the “Create” tab and select “Scheduled Task” then “User-defiend script”.
+6. Once this is done, a new window called “Create task” will open. Within it there are multiple empty fields that have to be filled as follows:
 
 Task: Install Portainer
 User: root
