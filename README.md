@@ -22,7 +22,7 @@ This repo has the following basic structure.
 ```
 
 
-# Wildcard Certificate and HTTP2/HTTPS compression:
+# Wildcard Certificate and HTTP2/HTTP compression:
 
 To do before setting up selfhosted software. 
 
@@ -34,7 +34,8 @@ Wildcard certificates: a wildcard certificate allows for the management and reac
 
 HTTP/2+HTTPS compression: Multiple settings within the synology networking system can be easily activated to increase security and speed. HTTP/2 is one of these settings. It is reccomended to use the following 2 settings to improve the overall functionality of your setup. By enabling HTTP/2 website connections will become optimized by reducing overall latency without changing web app settings. In order to enable:
 1. Go to control panel, select network, navigate to the connectivity tab and click on enable HTTP/2 and click apply.
-2. HTTP compression, another useful setting to use with these setups, enhances bandwidth efficiency and increases transfer speeds between web servers and browsers when connecting through HTTPS. HTTP compression mitigates classical bottlenecking issues by minimizing the size of data transferred between servers and clients, and opmizises data needed to perform at full capacity. In order to enable,go to control panel, select security, and under the ad
+2. HTTP compression, another useful setting to use with these setups, enhances bandwidth efficiency and increases transfer speeds between web servers and browsers when connecting through HTTPS. HTTP compression mitigates classical bottlenecking issues by minimizing the size of data transferred between servers and clients, and opmizises data needed to perform at full capacity. In order to enable,go to control panel, select security, and under the advanced tab check enable HTTP compression then click on apply. 
+
 
 
 
