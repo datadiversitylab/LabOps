@@ -1,0 +1,13 @@
+Task: Install Portainer
+User: root
+Uncheck the “enabled” box.
+
+Move on to the next tab in the window called “Schedule” and select “Run on the following date” with today’s date and select “Do not repeat” underneath it. Continue by moving to the next tab called “Task Settings” and select the “Send run details by email” box, and input your email. Next input the following script in the “User-defined script” field and select “OK”: 
+
+docker run -d --name=portainer \
+-p 8000:8000 \
+-p 9000:9000 \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /volume1/docker/portainer:/data \
+--restart=always \
+portainer/portainer-ce
