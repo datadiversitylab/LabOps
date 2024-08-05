@@ -1,3 +1,10 @@
+1. Open the Synology Package Center and within it, search for, and then install Docker inc.’s “Container Manager”. 
+2. As a next step we went back to the main interface and found “File Station”, Within it we chose the folder named “docker”,
+3. then headed to the “Create” tab and established a new folder named “portainer” in lowercase letters. 
+4. Navigate to Control  Panel, and under its menu selected “Task Scheduler”, 
+5. next went into the “Create” tab and select “Scheduled Task” then “User-defiend script”.
+6. Once this was done, a new window called “Create task” opened. Within it there are multiple empty fields that had to filled as follows:
+
 Task: Install Portainer
 User: root
 Uncheck the “enabled” box.
@@ -11,3 +18,19 @@ docker run -d --name=portainer \
 -v /volume1/docker/portainer:/data \
 --restart=always \
 portainer/portainer-ce
+
+
+Within the portainer menu,click on “Get Started” under the Environment Wizard’s quick setup. This will take you to the Environments home menu. Click on the ‘pencil’ shaped logo to edit the local environment. A new page will open where the environment details can be further filled out. Under the “Public IP” field input the NAS’s local IP and click on the “Update environment” button to confirm the changes. After this the environment should be updated and confirmed with a message saying so. 
+
+Next click on “Registries” under the main menu  and select “+Add registry”. From the options, shown select “Custom registry” and type in the registry’s details as follows, and then click on “Add registry”:
+
+Name: GHCR
+Registry URL: ghcr.io
+
+Repeat the process to add an additional 2 registries with the following details:
+
+1.	Name: CODEBERG
+2.	Registry URL: codeberg.org
+
+1.	Name: Qauy.io
+2.	Registry URL: quay.io
