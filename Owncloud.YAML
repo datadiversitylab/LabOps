@@ -1,0 +1,87 @@
+version: "3.9"
+services:
+  redis:
+    image: redis
+    command:
+      - /bin/sh
+      - -c
+      - redis-server --requirepass redispass
+      - --databases 1
+    container_name: ownCloud-REDIS
+    hostname: owncloud-redis
+    mem_limit: 256m
+    mem_reservation: 50m
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    user: 1026:100
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+    volumes:
+      - /volume1/docker/owncloud/redis:/data:rw
+    environment:
+      TZ: Europe/Bucharest
+    restart: on-failure:5
+
+  db:
+    image: mariadb:11.3-jammy
+    command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
+    container_name: ownCloud-DB
+    hostname: owncloud-db
+    mem_limit: 1g
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
+    user: 1026:100
+    volumes:
+      - /volume1/docker/owncloud/db:/var/lib/mysql:rw
+      - /volume1/docker/owncloud/db:/etc/mysql/conf.d:rw
+    environment:
+      TZ: Europe/Bucharest
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: owncloud
+      MYSQL_USER: ownclouduser
+      MYSQL_PASSWORD: owncloudpass
+    restart: on-failure:5
+
+  owncloud:
+    image: owncloud/server:latest
+    container_name: ownCloud
+    hostname: owncloud
+    mem_limit: 4g
+    cpu_shares: 768
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "/usr/bin/healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 4660:8080
+    volumes:
+      - /volume1/docker/owncloud/data:/mnt/data:rw
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      OWNCLOUD_DOMAIN: localhost:8080
+      OWNCLOUD_TRUSTED_DOMAINS: 192.168.1.18,owncloud.yourname.synology.me
+      OWNCLOUD_DB_TYPE: mysql
+      OWNCLOUD_DB_NAME: owncloud
+      OWNCLOUD_DB_PREFIX: oc_
+      OWNCLOUD_DB_USERNAME: ownclouduser
+      OWNCLOUD_DB_PASSWORD: owncloudpass
+      OWNCLOUD_DB_HOST: owncloud-db
+      OWNCLOUD_ADMIN_USERNAME: marius
+      OWNCLOUD_ADMIN_PASSWORD: mariushosting
+      OWNCLOUD_MYSQL_UTF8MB4: true
+      OWNCLOUD_REDIS_ENABLED: true
+      OWNCLOUD_REDIS_HOST: owncloud-redis
+      OWNCLOUD_REDIS_PASSWORD: redispass
+# more ENV @ https://github.com/owncloud-docker/base/blob/master/ENVIRONMENT.md
+    restart: on-failure:5
+    depends_on:
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_started
