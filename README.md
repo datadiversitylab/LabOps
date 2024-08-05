@@ -4,7 +4,7 @@
 
 # Objective
 
-Below you can find a set of necessary steps for setting up the set of selfhosted tools referenced in: The modern collaboratory: A self-hosted workflow of open source tools for efficient collaboration within research labs
+Below you can find a set of necessary steps for setting up the set of selfhosted tools referenced in: "The modern collaboratory: A self-hosted workflow of open source tools for efficient collaboration within research labs"
 
 
 # Remarks
