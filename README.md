@@ -14,11 +14,10 @@ This repo has the following basic structure.
 ├── docs                <- Space for documentation
 ├── README.md           <- Top-level README. Includes a description for Wildcard and HTTPS compression proccedures for increasing overall speed and security of self hosted deployments. 
 │
-├──  Mattermost_initialization.YAML    <-
-│
-├──  Portainer_install.YAML            <-
-│
-├──  Web_editor_content.YAML           <-   
+├──  Mattermost.YAML    <-
+├──  Owncloud.YAML      <-
+├──  Radicale.YAML      <-
+├──  OnlyOffice.YAML    <-  
 ```
 
 
