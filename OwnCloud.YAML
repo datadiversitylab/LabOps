@@ -1,0 +1,8 @@
+docker run -d --name=OnlyOffice \
+-p 8467:80 \
+-v /volume1/docker/onlyoffice/logs:/var/log/onlyoffice \
+-v /volume1/docker/onlyoffice/data:/var/www/onlyoffice/Data \
+-e JWT_ENABLED=true \
+-e JWT_SECRET=MariushostingMariushostingMari13 \
+--restart always \
+onlyoffice/documentserver
