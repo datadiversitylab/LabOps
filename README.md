@@ -125,7 +125,6 @@ Port: 8401 (mattermost) or 8467 (onlyoffice) or 4660 (owncloud)
 15. Within the portainer UI, click on “Stacks” and then added a new stack by clicking on the “+Add stack” button.
 16. For mattermost: name the stack “mattermost” and paste the contents of Mattermost.YAML file, or  found in this repository in the Portainer Stacks Web editor section.
 17. For owncloud: name the stack “owncloud” and paste the contents of owncloud.YAML file, or  found in this repository in the Portainer Stacks Web editor section.
-16. For onlyoffice: name the stack “mattermost” and paste the contents of Mattermost.YAML file, or  found in this repository in the Portainer Stacks Web editor section.
 17. Deploy the stack.
 
 
