@@ -14,18 +14,18 @@ This repo has the following basic structure.
 ```
 ├── README.md           <- Top-level README. Includes a description for Wildcard and HTTPS compression proccedures for increasing overall speed and security of self hosted deployments. 
 │
-├──  Mattermost         <-
+├──  Mattermost         <-Structure of the Mattermost synology folder
      └──
-├──  ownCloud           <-
+├──  ownCloud           <-Structure of the ownCloud synology folder
      └──
-├──  OnlyOffice         <-
+├──  OnlyOffice         <-Structure of the OnlyOffice synology folder
      └──
-├──  Radicale           <-
+├──  Radicale           <-Structure of the Radicale synology folder
      └──
 ├──  Mattermost.YAML    <-
 ├──  Owncloud.YAML      <-
-├──  Radicale           <-
-├──  OnlyOffice.YAML    <-  
+├──  Radicale_config    <-
+├──  OnlyOffice_config  <-  
 ```
 
 
