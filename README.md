@@ -22,10 +22,10 @@ This repo has the following basic structure.
      └──
 ├──  Radicale           <-Structure of the Radicale synology folder
      └──
-├──  Mattermost.YAML    <-
-├──  Owncloud.YAML      <-
-├──  Radicale_config    <-
-├──  OnlyOffice_config  <-  
+├──  Mattermost.YAML    <- YAML file for mattermost installation w/instructions
+├──  Owncloud.YAML      <- YAML file for Owncloud installation w/instructions
+├──  Radicale_config    <- Insruction file for Radicale installation
+├──  OnlyOffice_config  <- Instruction file for OnlyOffice installation
 ```
 
 
