@@ -1,3 +1,4 @@
+```
 version: "3.9"
 services:
   mattermost-db:
@@ -49,3 +50,21 @@ services:
     depends_on:
       mattermost-db:
         condition: service_started
+```
+"user", "MM_SERVICESETTINGS_SITEURL" and "TZ"  have to be edited for every instance of installation and can be unique to every user 
+TZ: (eg. America/Phoenix for TZ). 
+MM_SERVICESETTINGS_SITEURL: replace “https://chat.yourname.synology.me” with your own synology.me DDNS (previously created hostname).
+In order to find out the "user" value (which is composed of the User ID and Group ID in UID:GID format) we needed to go to Control Panel/Task Scheduler/ Create/ Scheduled Task/ User-defined script.
+Under the new window opened, there will be a 3 tabs (General, Schedule and Task Settings). 
+Under General, the Task field should  be filled with “My UID and GID” and under User you should select your NAS user. 
+In the next tab “Schedule” select “Run on the following date” and select today’s date then select “Do not repeat”, select a time to run it. 
+On the next tab, “Task Settings” check the “Send run details by email” box and then add an email that can be reliably accessed.In the same tab, ad “id” as the user-defined script under the Run command section. 
+After doing this, press okay. 
+Go back to Control Panel/ Task Scheduler and select your newly created “My UID and GID” task then  click on the “Run” tab and confirm the run.
+An email will be sent to the one used in the previous step with both UID and GID values alongside additional information. 
+
+
+
+
+
+
