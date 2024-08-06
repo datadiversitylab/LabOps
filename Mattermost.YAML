@@ -52,15 +52,18 @@ services:
       mattermost-db:
         condition: service_started
 ```
-
+# Necessary edits to code
 "user", "MM_SERVICESETTINGS_SITEURL" and "TZ"  have to be edited for every instance of installation and can be unique to every user 
 
-TZ: 
+# Timezone
+TZ:
 1. (eg. America/Phoenix for TZ). 
 
+#Site URL
 MM_SERVICESETTINGS_SITEURL: 
 1. replace “https://chat.yourname.synology.me” with your own synology.me DDNS (previously created hostname).
 
+# User
 In order to find out the "user" value (which is composed of the User ID and Group ID in UID:GID format):
 1. we needed to go to Control Panel/Task Scheduler/ Create/ Scheduled Task/ User-defined script.
 2. Under the new window opened, there will be a 3 tabs (General, Schedule and Task Settings). 
