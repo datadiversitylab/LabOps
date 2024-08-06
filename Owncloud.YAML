@@ -88,22 +88,24 @@ services:
 
 
 # Necessary edits to code
+"user", "OWNCLOUD_TRUSTED_DOMAINS", "OWNCLOUD_ADMIN_USERNAME", "OWNCLOUD_ADMIN_PASSWORD" and "TZ"  have to be edited for every instance of installation and can be unique to every user 
+
 
 # Timezone
 TZ:
 1. (eg. America/Phoenix for TZ). 
 
 #IP
-OWNCLOUD_TRUSTED_DOMAINS
-1.
+OWNCLOUD_TRUSTED_DOMAINS:
+1.For this value, type in your NAS IP add a comma, and then add your synology.me DDNS without https:// at the beginning (eg. 192.168.1.18,owncloud.X.synology.me)
 
 # Username
-OWNCLOUD_ADMIN_USERNAME
-1. 
+OWNCLOUD_ADMIN_USERNAME:
+1. Type in own username.
 
 #Password
-OWNCLOUD_ADMIN_PASSWORD
-1.
+OWNCLOUD_ADMIN_PASSWORD:
+1. Type in own password.
 
 # User
 In order to find out the "user" value (which is composed of the User ID and Group ID in UID:GID format):
