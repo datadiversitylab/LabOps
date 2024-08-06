@@ -131,8 +131,8 @@ Port: 8401 (mattermost) or 8467 (onlyoffice) or 4660 (owncloud)
 13.   For onlyoffice: create 2 new folders with the following names in lowercase: "data", "logs". 
 14. Next, log in to portainer by visiting: https://localhost:9443 or the previously set up http://synology-ip-address:9000   and then your synology username and password.
 15. Within the portainer UI, click on “Stacks” and then added a new stack by clicking on the “+Add stack” button.
-16. For mattermost: name the stack “mattermost” and paste the contents of Mattermost.YAML file, or  found in this repository in the Portainer Stacks Web editor section.
-17. For owncloud: name the stack “owncloud” and paste the contents of owncloud.YAML file, or  found in this repository in the Portainer Stacks Web editor section.
+16. For mattermost: name the stack “mattermost” and edit and paste the contents of Mattermost.YAML file  found in this repository in the Portainer Stacks Web editor section.
+17. For owncloud: name the stack “owncloud” and edit and paste the contents of owncloud.YAML file found in this repository in the Portainer Stacks Web editor section.
 17. Deploy the stack.
 
 
