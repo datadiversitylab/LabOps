@@ -1,1 +1,14 @@
-
+# Set up development area
+1. Within Synology navigate to: Control Panel/Shared Folder/Create
+2. Name folder "dock_dev"
+3. Download the Radicale.tar file and untar within "dock_dev"
+4. SSH into your Synology
+5. Change directory into /volume1/dock_dev/radicale 
+6. Run the command: docker build-t4tegs/radicale
+7. Push image to DockerHub by running the command: docker login
+8. Provide account credentials
+9. docker push 4tegs/radicale"latest
+10. Start deployment the synology docker container by SSH into synlogy and running the command -i
+11. Run the command: mkdir/volume1/docker/radicale
+12. From the Radicale.tar file, untar only the configuration files "configs" folder into /volume1/docker/radicale
+13. 
