@@ -1,3 +1,3 @@
 ├── onlyoffice             
-│   ├── data
-│   └── logs
+└── data
+└── logs
