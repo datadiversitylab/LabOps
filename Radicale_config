@@ -6,7 +6,7 @@
 6. Run the command: docker build-t4tegs/radicale
 7. Push image to DockerHub by running the command: docker login
 8. Provide account credentials
-9. docker push 4tegs/radicale"latest
+9. Run the command: docker push 4tegs/radicale:latest
 10. Start deployment the synology docker container by SSH into synlogy and running the command -i
 11. Run the command: mkdir/volume1/docker/radicale
 12. From the Radicale.tar file, untar only the configuration files "configs" folder into /volume1/docker/radicale
