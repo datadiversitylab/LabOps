@@ -1,0 +1,34 @@
+# next steps for OnlyOffice install after following universal README file
+1. Go to control panel, click on Task Scheduler/create/Scheduled Task/ User-defined script. 
+2. A new window will open with 3 different tabs (General, Schedule and Task Settings) fill out the fields as follows:
+
+
+General: 
+1.  Task: write in "Install OnlyOffice". Uncheck the "enabled" box. 
+2.  User: check in "root"
+
+Schedule:
+1.  Select "Run on the following date" with today's date.
+2.  Select "Do not repeat" underneath. 
+
+
+Task Settings: 
+1.  Check "Send run details by email" 
+2. Add the following User-defined script, making sure you edit the "JWT_SECRET=" value with your own 32 random character password
+
+
+
+```
+docker run -d --name=OnlyOffice \
+-p 8467:80 \
+-v /volume1/docker/onlyoffice/logs:/var/log/onlyoffice \
+-v /volume1/docker/onlyoffice/data:/var/www/onlyoffice/Data \
+-e JWT_ENABLED=true \
+-e JWT_SECRET=MariushostingMariushostingMari13 \   #
+--restart always \
+onlyoffice/documentserver
+```
+
+1. Click OK. Type in your DSM password and submit.
+2. Go back to Task Scheduler and run the newly configured "Install OnlyOffice" script. 
+3. OnlyOffice should now be accessible from within software OwnCloud/NextCloud by first disabling the integrated app and then manually adding/download OnlyOffice
