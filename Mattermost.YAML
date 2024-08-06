@@ -51,6 +51,7 @@ services:
       mattermost-db:
         condition: service_started
 ```
+
 "user", "MM_SERVICESETTINGS_SITEURL" and "TZ"  have to be edited for every instance of installation and can be unique to every user 
 TZ: (eg. America/Phoenix for TZ). 
 MM_SERVICESETTINGS_SITEURL: replace “https://chat.yourname.synology.me” with your own synology.me DDNS (previously created hostname).
