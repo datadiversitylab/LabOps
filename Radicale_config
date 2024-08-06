@@ -1,4 +1,3 @@
-# Set up development area
 1. Within Synology navigate to: Control Panel/Shared Folder/Create
 2. Name folder "dock_dev"
 3. Download the Radicale.tar file and untar within "dock_dev"
