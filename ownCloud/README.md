@@ -1,4 +1,4 @@
 ├── owncloud         
-│  └── data        
-│  └── db
-│  └── redis
+│   └── data        
+│   └── db
+│   └── redis
