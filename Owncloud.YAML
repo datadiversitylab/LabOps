@@ -85,3 +85,35 @@ services:
         condition: service_healthy
       db:
         condition: service_started
+
+
+# Necessary edits to code
+
+# Timezone
+TZ:
+1. (eg. America/Phoenix for TZ). 
+
+#IP
+OWNCLOUD_TRUSTED_DOMAINS
+1.
+
+# Username
+OWNCLOUD_ADMIN_USERNAME
+1. 
+
+#Password
+OWNCLOUD_ADMIN_PASSWORD
+1.
+
+# User
+In order to find out the "user" value (which is composed of the User ID and Group ID in UID:GID format):
+1. we needed to go to Control Panel/Task Scheduler/ Create/ Scheduled Task/ User-defined script.
+2. Under the new window opened, there will be a 3 tabs (General, Schedule and Task Settings). 
+3. Under General, the Task field should  be filled with “My UID and GID” and under User you should select your NAS user. 
+4. In the next tab “Schedule” select “Run on the following date” and select today’s date then select “Do not repeat”, select a time to run it. 
+5. On the next tab, “Task Settings” check the “Send run details by email” box and then add an email that can be reliably accessed.In the same tab, ad “id” as the user-defined script under the Run command section. 
+6. After doing this, press okay. 
+7. Go back to Control Panel/ Task Scheduler and select your newly created “My UID and GID” task then  click on the “Run” tab and confirm the run.
+8. An email will be sent to the one used in the previous step with both UID and GID values alongside additional information. 
+
+
