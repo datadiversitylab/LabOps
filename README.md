@@ -46,7 +46,7 @@ HTTP/2+HTTPS compression: Multiple settings within the synology networking syste
 
 # Installing Portainer and Docker
 1. Open the Synology Package Center and within it, search for, and then install Docker inc.’s “Container Manager”. 
-2. Go back to the main interface and found “File Station”, Within it chose the folder named “docker”,
+2. Go back to the main interface and find “File Station”, Within it chose the folder named “docker”,
 3. Head to the “Create” tab and established a new folder named “portainer” in lowercase letters. 
 4. Navigate to Control  Panel, and under its menu select “Task Scheduler”, 
 5. Next go into the “Create” tab and select “Scheduled Task” then “User-defiend script”.
