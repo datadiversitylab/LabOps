@@ -1,6 +1,9 @@
 ```
-config
-logging
-rights
-users
+
+├──              
+│   ├── config 
+│   ├── logging
+│   ├── rights
+│   ├── users
+
 ```
