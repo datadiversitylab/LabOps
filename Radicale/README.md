@@ -1,4 +1,6 @@
+```
 config
 logging
 rights
 users
+```
