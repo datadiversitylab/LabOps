@@ -12,5 +12,8 @@
 12. From the Radicale.tar file, untar only the configuration files "configs" folder into /volume1/docker/radicale
 13. Add a user and password for radicale by changing directory into /volume1/docker/radicale
 14. Running the command: htpasswd -cmb users your-user1 password1 . Where "user1" is your own username and "password1" is your own password.
-
+15. Pull the image created by going into Docker withint Synology, go into Image/Add
+16. A menu called "Add from URL" should appear. Add "4tegs/radicale" in the Hub Page or Repository field.
+17. Go back to the main Docker menu and select Container/Settings/Import. Select radicale.json.
+18. The container should deploy!
 
