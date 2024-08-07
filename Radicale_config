@@ -10,4 +10,7 @@
 10. Start deployment the synology docker container by SSH into synlogy and running the command -i
 11. Run the command: mkdir/volume1/docker/radicale
 12. From the Radicale.tar file, untar only the configuration files "configs" folder into /volume1/docker/radicale
-13. 
+13. Add a user and password for radicale by changing directory into /volume1/docker/radicale
+14. Running the command: htpasswd -cmb users your-user1 password1 . Where "user1" is your own username and "password1" is your own password.
+
+
