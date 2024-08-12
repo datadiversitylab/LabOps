@@ -1,6 +1,6 @@
 ```
 
-├──    Configs          
+├──Configs          
 │   ├── config 
 │   ├── logging
 │   ├── rights
