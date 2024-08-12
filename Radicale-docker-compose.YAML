@@ -1,0 +1,13 @@
+```
+version: "3.8"  # optional since v1.27.0
+services:
+  myservices:
+    image: "4tegs/radicale:latest"
+    container_name: radicale
+    restart: always
+    ports:
+      - 5232:5232
+    volumes:
+      - /volume1/docker/radicale:/etc/radicale
+
+        ```
