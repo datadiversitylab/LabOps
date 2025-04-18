@@ -6,6 +6,9 @@
 
 Below you can find a set of necessary steps for setting up the set of selfhosted tools referenced in: "The modern collaboratory: A self-hosted workflow of open source tools for efficient collaboration within research labs"
 
+# Deployment in personal computers
+
+The tools outlined in this repository can be deployed directly in a server (or NAS) using docker. However, users interested in testing or exploring this LabOps workflow at smaller scales (e.g. their personal laptops) can also download, install and run portainer locally before using the YAML files to deploy systems from their own computers. 
 
 # Remarks
 
