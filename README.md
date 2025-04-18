@@ -141,3 +141,7 @@ Port: 8401 (mattermost) or 8467 (onlyoffice) or 4660 (owncloud)
 ### Acknowledgment
 
 Initial project structure was created following the structure in [this repo](https://github.com/malill/research-template).
+
+### Contributing
+Please see our [contributing guide](CONTRIBUTING).
+
