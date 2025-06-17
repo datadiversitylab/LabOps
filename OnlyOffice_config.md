@@ -23,7 +23,7 @@ docker run -d --name=OnlyOffice \
 -v /volume1/docker/onlyoffice/logs:/var/log/onlyoffice \
 -v /volume1/docker/onlyoffice/data:/var/www/onlyoffice/Data \
 -e JWT_ENABLED=true \
--e JWT_SECRET=MariushostingMariushostingMari13 \   #
+-e JWT_SECRET=aYJcAKOn5h5EXp0kWXcNXhzoJNEf0FCB \   #String with 32 characters
 --restart always \
 onlyoffice/documentserver
 ```
