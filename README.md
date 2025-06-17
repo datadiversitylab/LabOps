@@ -4,7 +4,7 @@
 
 # Objective
 
-Below you can find a set of necessary steps for setting up the set of selfhosted tools referenced in: "The modern collaboratory: A self-hosted workflow of open source tools for efficient collaboration within research labs"
+Below you can find a set of necessary steps for setting up the set of selfhosted tools referenced in: "LabOps: A flexible self-hosted workflow of open source tools for efficient collaboration within research laboratories". This guide assumes access to a Synology NAS, although the steps are generally transversal to other systems.
 
 # Deployment in personal computers
 
@@ -15,7 +15,7 @@ The tools outlined in this repository can be deployed directly in a server (or N
 This repo has the following basic structure.
 
 ```
-├── README.md           <- Top-level README. Includes a description for Wildcard and HTTPS compression proccedures for increasing overall speed and security of self hosted deployments. 
+├── README.md           <- Top-level README. Includes a description for Wildcard and HTTPS compression procedures for increasing overall speed and security of self hosted deployments. 
 │
 ├──  Mattermost         <-Structure of the Mattermost synology folder
      └──
@@ -39,13 +39,13 @@ To do before setting up selfhosted software.
 
 Wildcard certificates: a wildcard certificate allows for the management and reach of a secure HTTPS enabled docker container by securing subdomains under a main domain, which ultimately facilitates certificate renewal time and efficiency. Since both Mattermost and ownCloud need to be installed as docker containers, enabling wildcat certificates is necessary. In order to do this:
 
-1. First navigate within the Synology Disk Station Manager (DSM) which is the interactive and management equivalent of a GUI based OS. Once here, the “cerficate” tab setting was selected by first accessing “security” under the connectivity column,  in the control panel.
+1. First navigate within the Synology Disk Station Manager (DSM) which is the interactive and management equivalent of a GUI based OS. Once here, the “cerficate” tab setting was selected by first accessing “security” under the connectivity column, in the control panel.
 2. Within the certificate tab, click on “add” and selected “replace an existing certificate” then select the Synology DDNS certificate from the list (previously set up). Next select "get a certificate from let’s encrypt" and set it as the default certificate by checking the box under it. Click next.
 3. Under the “Get a Certificate from Let’s Encrypt” menu type in your DDNS, its format should look similar to: "X.synology.me". On the email area type in your email On the Subject Alternative Name, type in an asterisk symbol followed by a period (*.) and then type in your DDNS. Final result look something like *.X.synology.me. Click on done. 
 
-HTTP/2+HTTPS compression: Multiple settings within the synology networking system can be easily activated to increase security and speed. HTTP/2 is one of these settings. It is reccomended to use the following 2 settings to improve the overall functionality of your setup. By enabling HTTP/2 website connections will become optimized by reducing overall latency without changing web app settings. In order to enable:
+HTTP/2+HTTPS compression: Multiple settings within the synology networking system can be easily activated to increase security and speed. HTTP/2 is one of these settings. It is recomended to use the following 2 settings to improve the overall functionality of your setup. By enabling HTTP/2 website connections will become optimized by reducing overall latency without changing web app settings. In order to enable:
 1. Go to control panel, select network, navigate to the connectivity tab and click on enable HTTP/2 and click apply.
-2. HTTP compression, another useful setting to use with these setups, enhances bandwidth efficiency and increases transfer speeds between web servers and browsers when connecting through HTTPS. HTTP compression mitigates classical bottlenecking issues by minimizing the size of data transferred between servers and clients, and opmizises data needed to perform at full capacity. In order to enable,go to control panel, select security, and under the advanced tab check enable HTTP compression then click on apply. 
+2. HTTP compression, another useful setting to use with these setups, enhances bandwidth efficiency and increases transfer speeds between web servers and browsers when connecting through HTTPS. HTTP compression mitigates classical bottlenecking issues by minimizing the size of data transferred between servers and clients, and optimizes data needed to perform at full capacity. In order to enable, go to control panel, select security, and under the advanced tab check enable HTTP compression then click on apply. 
 
 
 # Installing Portainer and Docker
@@ -53,7 +53,7 @@ HTTP/2+HTTPS compression: Multiple settings within the synology networking syste
 2. Go back to the main interface and find “File Station”, Within it chose the folder named “docker”,
 3. Head to the “Create” tab and established a new folder named “portainer” in lowercase letters. 
 4. Navigate to Control  Panel, and under its menu select “Task Scheduler”, 
-5. Next go into the “Create” tab and select “Scheduled Task” then “User-defiend script”.
+5. Next go into the “Create” tab and select “Scheduled Task” then “User-defined script”.
 6. Once this is done, a new window called “Create task” will open. Within it there are multiple empty fields that have to be filled as follows:
 ```
 Task: Install Portainer
@@ -73,7 +73,7 @@ docker run -d --name=portainer \
 portainer/portainer-ce
 ```
 
-10. Within the portainer menu,click on “Get Started” under the Environment Wizard’s quick setup. This will take you to the Environments home menu. 
+10. Within the portainer menu, click on “Get Started” under the Environment Wizard’s quick setup. This will take you to the Environments home menu. 
 11. Click on the ‘pencil’ shaped logo to edit the local environment. A new page will open where the environment details can be further filled out.
 12. Under the “Public IP” field input the NAS’s local IP and click on the “Update environment” button to confirm the changes. 
 13. After this the environment should be updated and confirmed with a message saying so. 
@@ -122,7 +122,6 @@ Hostname: localhost
 
 Port: 8401 (mattermost) or 8467 (onlyoffice) or 4660 (owncloud)
 ```
-
 
 5. After inputting this information, switch to the custom header tab, then click on “Create” and choose the “WebSocket” option.
 6. After this is selected, two input boxes for “Header Name” and “Value” will appear, leave as is and click on Save.
