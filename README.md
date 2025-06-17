@@ -39,7 +39,7 @@ To do before setting up selfhosted software.
 
 Wildcard certificates: a wildcard certificate allows for the management and reach of a secure HTTPS enabled docker container by securing subdomains under a main domain, which ultimately facilitates certificate renewal time and efficiency. Since both Mattermost and ownCloud need to be installed as docker containers, enabling wildcat certificates is necessary. In order to do this:
 
-1. First navigate within the Synology Disk Station Manager (DSM) which is the interactive and management equivalent of a GUI based OS. Once here, the “cerficate” tab setting was selected by first accessing “security” under the connectivity column, in the control panel.
+1. First navigate within the Synology Disk Station Manager (DSM) which is the interactive and management equivalent of a GUI based OS. Once here, the “certificate” tab setting was selected by first accessing “security” under the connectivity column, in the control panel.
 2. Within the certificate tab, click on “add” and selected “replace an existing certificate” then select the Synology DDNS certificate from the list (previously set up). Next select "get a certificate from let’s encrypt" and set it as the default certificate by checking the box under it. Click next.
 3. Under the “Get a Certificate from Let’s Encrypt” menu type in your DDNS, its format should look similar to: "X.synology.me". On the email area type in your email On the Subject Alternative Name, type in an asterisk symbol followed by a period (*.) and then type in your DDNS. Final result look something like *.X.synology.me. Click on done. 
 
