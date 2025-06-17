@@ -1,4 +1,3 @@
-# next steps for OnlyOffice install after following universal README file
 1. Go to control panel, click on Task Scheduler/create/Scheduled Task/ User-defined script. 
 2. A new window will open with 3 different tabs (General, Schedule and Task Settings) fill out the fields as follows:
 
